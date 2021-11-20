@@ -8,19 +8,14 @@ export const client = axios.create({
   },
 });
 
-export const getData = ({ key, uri }) => {
-  return selector({
-    key: key,
-    get: async () => {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        const { data } = await client.get(uri);
-        return data.data;
-      } catch (err) {
-        throw err;
-      }
-    },
-  });
+export const getData = async ({ uri }) => {
+  // eslint-disable-next-line no-useless-catch
+  try {
+    const { data } = await client.get(uri);
+    return data.data;
+  } catch (err) {
+    throw err;
+  }
 };
 
 export const postData = async ({ uri, data }) => {
