@@ -1,17 +1,32 @@
 // import { getData, putData } from 'libs/api';
-import React from 'react';
+// import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 // import { useLocation, useNavigate } from 'react-router';
 // import WordBox from './WordBox';
 import Question from './Question';
+// import { client } from 'libs/api';
 
 const SopNewWord = () => {
-  const title = 'Q. 솝커톤 과제마감 1분 전인데 아직 작업중인 기분은?';
+  const title = 'Q. 솝커톤 과제마감 1분 전인데 아직 작업중인 기분은?(3)';
   //   const location = useLocation();
   //   const id = location.id;
-  //   const { title, wordNum } = await getData(`question/${id}`);
+  //   // const { title, wordNum } = await client.get();
+  //   const wordNum = 3;
   //   const [newWord, setNewWord] = useState('');
-  //   const { answerId, word } = await getData(`answer/${id}`);
+  //   const [answerId, setAnswerId] = useState('');
+  //   const [word, setWord] = useState('');
+
+  //   const getDataWord = async () => {
+  //     const { answer } = await client.get('/answer');
+  //     setWord(answer.word);
+  //     setAnswerId(answer.answerId);
+  //     console.log(answer.answerId, answer.word);
+  //   };
+  //   useEffect(() => {
+  //     getDataWord();
+  //   }, []);
+
+  //   // const { answerId, word } = await getData(`answer/${id}`);
   //   const leaveWordNum = wordNum - word.length() - 1;
   //   const initLeaveWordArray = () => {
   //     const arr = [];
@@ -19,11 +34,16 @@ const SopNewWord = () => {
   //     return arr;
   //   };
 
-  //   const onClick = () => {
+  //   const onClick = async () => {
   //     const tempNewWord = word + newWord;
-  //     putData({
-  //       uri: `answer/${answerId}`,
-  //       data: { word: tempNewWord },
+  //     // putData({
+  //     //   uri: `answer/${answerId}`,
+  //     //   data: { word: tempNewWord },
+  //     // });
+
+  //     await client.post('/answer', {
+  //       answerId,
+  //       word: tempNewWord,
   //     });
   //     if (tempNewWord.length === wordNum) {
   //       const navigate = useNavigate();
