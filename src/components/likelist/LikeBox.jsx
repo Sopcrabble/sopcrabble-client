@@ -2,14 +2,14 @@ import { ic_heart_selected } from 'assets';
 import React from 'react';
 import styled from 'styled-components';
 
-const LikeBox = () => {
+const LikeBox = ({ list }) => {
   return (
     <StyledLikeBox>
-      <div>솝됐다</div>
+      <div>{list.word}</div>
       <button>
         <img src={ic_heart_selected} />
       </button>
-      <div>25</div>
+      <div>{list.likeNum}</div>
     </StyledLikeBox>
   );
 };
