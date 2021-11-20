@@ -1,22 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import LikeBox from 'components/likelist/LikeBox';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { ic_arrow_back } from 'assets';
+import { client } from 'libs/api';
 
 const LikeList = () => {
+  const [listData, setListData] = useState([]);
   const navigate = useNavigate();
-
   const handleClick = () => {
     navigate(-1);
   };
+
+  const getLikeList = async () => {
+    const { data } = await client.get('/answer/list');
+    setListData(data);
+  };
+
+  useEffect(() => {
+    getLikeList();
+  }, []);
 
   return (
     <StyledLikeList>
       <button onClick={handleClick}>
         <img src={ic_arrow_back} />
       </button>
-      <h2>Q. 솝트 기획파트원 애칭 만들어주세요.</h2>
+      <h2>솝커톤 과제마감 1분전인데 아직 작업중인 기분 표현해줘 ...</h2>
+      <div>
+        {listData.map((list) => (
+          <LikeBox key={list.id} list={list} />
+        ))}
+      </div>
       <LikeBox />
       <LikeBox />
       <LikeBox />

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const LikeBox = () => {
   return (
     <StyledLikeBox>
-      <div>text1</div>
+      <div>솝됐다</div>
       <button>
         <img src={ic_heart_selected} />
       </button>
