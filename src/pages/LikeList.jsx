@@ -9,7 +9,7 @@ const LikeList = () => {
   const [listData, setListData] = useState([]);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(-1);
+    navigate(-2);
   };
 
   const getLikeList = async () => {
