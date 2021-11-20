@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Intro from 'pages/Intro';
 import Home from 'pages/Home';
 import Registration from 'pages/Registration';
 import Relay from 'pages/Relay';
@@ -11,8 +10,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Intro />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/relay" element={<Relay />} />
         <Route path="/likelist" element={<LikeList />} />
