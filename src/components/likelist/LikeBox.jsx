@@ -1,13 +1,17 @@
-import { ic_heart_selected } from 'assets';
+import { ic_heart_selected, ic_heart_default } from 'assets';
 import React from 'react';
 import styled from 'styled-components';
 
 const LikeBox = ({ list }) => {
+  let isZero = 0;
+  if (list.likeNum === 0) {
+    isZero = 1;
+  }
   return (
     <StyledLikeBox>
       <div>{list.word}</div>
       <button>
-        <img src={ic_heart_selected} />
+        <img src={isZero ? ic_heart_default : ic_heart_selected} />
       </button>
       <div>{list.likeNum}</div>
     </StyledLikeBox>
