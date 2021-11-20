@@ -8,7 +8,7 @@
 |-|-|-|
 |[@Jiyun Kim](https://github.com/small-j)|[@Jiyeon Baek](https://github.com/100Gyeon)|[@Sangeon Seok](https://github.com/sharpcoder312)|
 
-## 3. 코드 컨벤션
+## 3. Convention
 ### Code convention
 - eslint, prettier사용
 - 변수, 함수 Camel case 기본, 폴더이름 소문자 시작, 파일 이름(컴포넌트만) 대문자 시작
