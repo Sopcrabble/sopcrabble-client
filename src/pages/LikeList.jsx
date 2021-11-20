@@ -13,8 +13,9 @@ const LikeList = () => {
   };
 
   const getLikeList = async () => {
-    const { data } = await client.get('/answer/list');
+    const { data } = await client.get('answer/list');
     setListData(data);
+    console.log(data);
   };
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const LikeList = () => {
       <button onClick={handleClick}>
         <img src={ic_arrow_back} />
       </button>
-      <h2>솝커톤 과제마감 1분전인데 아직 작업중인 기분 표현해줘 ...</h2>
+      <h2>Q. 솝커톤 과제마감 1분전인데 아직 작업중인 기분 표현해줘 ...</h2>
       <div>
         {listData.map((list) => (
           <LikeBox key={list.id} list={list} />
