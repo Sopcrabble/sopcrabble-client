@@ -44,9 +44,9 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  /* body, button {
-    font-family: 'Noto Sans KR', sans-serif;
-  } */
+  body, button {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  }
 `;
 
 export default GlobalStyle;
