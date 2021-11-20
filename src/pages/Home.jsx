@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import countState from './Atoms';
 // import { useRecoilState } from 'recoil';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '../assets/images/logo.svg';
 import { ReactComponent as Main } from '../assets/images/main.svg';
+import { ReactComponent as Landing } from '../assets/images/landing.svg';
 
 const Home = () => {
+  let [alert, setAlert] = useState(true);
+  useEffect(() => {
+    // axios.get => useEffect에서 axios쓰는 법. 물론 Detail 컴포넌트 처음 로드시에만 ajax로 데이터를 가져오려면 []를 꼭 써줘야한다.
+    let timer = setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   // const [counter, setCounter] = useRecoilState(countState);
   // const getArticleData = async () => {
   //   const { data } = await client.get("/article")
@@ -16,22 +27,23 @@ const Home = () => {
 
   return (
     <StyledWrapper>
-      <Logo className="logo" />
-      <Main className="main" />
-      {/* <div>
-        {articleData.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
-      </div> */}
-      <div className="buttons">
-        <Link to="/registration">
-          <StyledButton>의뢰 하기</StyledButton>
-        </Link>
-        <Link to="/favorite">
-          <StyledButton>솝조어</StyledButton>
-        </Link>
-      </div>
-      <button className="fiction"></button>
+      {alert === true ? (
+        <Landing className="landing" />
+      ) : (
+        <>
+          <Logo className="logo" />
+          <Main className="main" />
+          <div className="buttons">
+            <Link to="/registration">
+              <StyledButton>의뢰 하기</StyledButton>
+            </Link>
+            <Link to="/favorite">
+              <StyledButton>솝조어</StyledButton>
+            </Link>
+          </div>
+          <button className="fiction"></button>
+        </>
+      )}
     </StyledWrapper>
   );
 };
@@ -46,8 +58,6 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  animation: fadeIn 1.5s ease-in-out;
 `;
 
 const StyledButton = styled.button`

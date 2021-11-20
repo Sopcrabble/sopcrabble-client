@@ -6,7 +6,7 @@ import { ic_arrow_back, img_favorite } from 'assets';
 const Favorite = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/home');
+    navigate('/');
   };
   return (
     <StyledFavorite>

@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { ic_arrow_back } from 'assets';
 
 const Registration = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(-1);
+  };
   const [values, setValues] = useState({ title: '', wordNum: '' });
 
   const handleChange = (event) => {
@@ -13,10 +19,11 @@ const Registration = () => {
     event.preventDefault();
   };
 
-  console.log(values.wordNum);
-
   return (
     <StyledRegistration>
+      <button onClick={handleClick}>
+        <img src={ic_arrow_back} />
+      </button>
       <div> 솝조어를 만들고 싶나요? 만들고 싶은 솝조어를 의뢰해보세요. </div>
       <form onSubmit={handleSubmit}>
         <div>
@@ -60,7 +67,13 @@ const StyledRegistration = styled.div`
 
   animation: fadeIn 1.5s ease-in-out;
 
-  & > div:first-child {
+  & > button {
+    position: relative;
+    top: -25%;
+    left: -35%;
+  }
+
+  & > div:nth-child(2) {
     font-weight: bold;
     font-size: 3.5rem;
     line-height: 4.2rem;
