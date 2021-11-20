@@ -6,4 +6,10 @@ export const countState = atom({
   default: 0,
 });
 
-export const getQuestionList = getData();
+export const questionId = atom({
+  key: 'questionId',
+  default: 1,
+});
+
+export const getQuestionList = getData({ key: 'questionList', uri: `question` });
+export const getQuestion = getData({ key: 'questionId', uri: `question/${questionId}` });

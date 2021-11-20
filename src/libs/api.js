@@ -2,7 +2,7 @@ import axios from 'axios';
 import { selector } from 'recoil';
 
 export const client = axios.create({
-  baseURL: 'http://localhost:4000/',
+  baseURL: 'http://localhost:4000/api/',
   headers: {
     'Content-Type': 'application/json',
   },
