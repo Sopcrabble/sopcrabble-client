@@ -1,14 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from 'pages/Main';
-import Sub from 'pages/Sub';
+import Intro from 'pages/Intro';
+import Home from 'pages/Home';
+import Registration from 'pages/Registration';
+import Relay from 'pages/Relay';
+import LikeList from 'pages/LikeList';
+import Favorite from 'pages/Favorite';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/sub" element={<Sub />} />
+        <Route path="/" element={<Intro />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/relay" element={<Relay />} />
+        <Route path="/likelist" element={<LikeList />} />
+        <Route path="/favorite" element={<Favorite />} />
         <Route path="/*" element={<p>Page Not Found</p>} />
       </Routes>
     </BrowserRouter>

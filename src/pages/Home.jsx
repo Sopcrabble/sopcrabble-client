@@ -2,7 +2,7 @@ import React from 'react';
 import Header from 'components/common/Header';
 import Footer from 'components/common/Footer';
 
-const Sub = () => {
+const Home = () => {
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ const Sub = () => {
   );
 };
 
-export default Sub;
+export default Home;
