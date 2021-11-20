@@ -29,6 +29,6 @@
 
 
 ## 4. 브랜치 전략
-- master - develop - feature
+- master - feature
 - master : 배포
 - feat/[기능] : 기능 개발을 진행하는 브랜치
