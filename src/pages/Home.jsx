@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import countState from './Atoms';
 // import { useRecoilState } from 'recoil';
 import { Link } from 'react-router-dom';
@@ -8,6 +9,10 @@ import { ReactComponent as Main } from '../assets/images/main.svg';
 import { ReactComponent as Landing } from '../assets/images/landing.svg';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleRelay = () => {
+    navigate('/relay');
+  };
   let [alert, setAlert] = useState(true);
   useEffect(() => {
     // axios.get => useEffect에서 axios쓰는 법. 물론 Detail 컴포넌트 처음 로드시에만 ajax로 데이터를 가져오려면 []를 꼭 써줘야한다.
@@ -41,7 +46,7 @@ const Home = () => {
               <StyledButton>솝조어</StyledButton>
             </Link>
           </div>
-          <button className="fiction"></button>
+          <button onClick={handleRelay} className="fiction"></button>
         </>
       )}
     </StyledWrapper>

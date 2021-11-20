@@ -8,6 +8,9 @@ const Registration = () => {
   const handleClick = () => {
     navigate(-1);
   };
+  const handleRelay = () => {
+    navigate('/relay');
+  };
   const [values, setValues] = useState({ title: '', wordNum: '' });
 
   const handleChange = (event) => {
@@ -48,7 +51,9 @@ const Registration = () => {
             placeholder="글자 수를 2~6자로 입력해주세요."
           />
         </div>
-        <button type="submit">의뢰</button>
+        <button onClick={handleRelay} type="submit">
+          의뢰
+        </button>
       </form>
     </StyledRegistration>
   );
@@ -71,6 +76,7 @@ const StyledRegistration = styled.div`
     position: relative;
     top: -25%;
     left: -35%;
+    background: transparent;
   }
 
   & > div:nth-child(2) {
