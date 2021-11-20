@@ -33,3 +33,17 @@
 - master - feature
 - master : 배포
 - feat/[page명] : 페이지 개발을 진행하는 브랜치
+
+
+## 5. 기술 스택 및 라이브러리
+```
+"axios": "^0.24.0",
+"json-server": "^0.17.0",
+"react": "^17.0.2",
+"react-dom": "^17.0.2",
+"react-router-dom": "^6.0.2",
+"react-scripts": "^4.0.3",
+"styled-components": "^5.3.3",
+"styled-reset": "^4.3.4",
+"web-vitals": "^1.0.1"
+```
