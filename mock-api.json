@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "answerId": 3,
+      "word": "솝됐다",
+      "likeNum": 20
+    },
+    {
+      "answerId": 4,
+      "word": "어쩔솝",
+      "likeNum": 7
+    },
+    {
+      "answerId": 1,
+      "word": "숨ㅇ멎",
+      "likeNum": 2
+    },
+    {
+      "answerId": 2,
+      "word": "솝떡해",
+      "likeNum": 1
+    }
+  ]
+}
