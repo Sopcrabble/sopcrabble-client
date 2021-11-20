@@ -13,7 +13,7 @@ const LikeList = () => {
   };
 
   const getLikeList = async () => {
-    const { data } = await client.get('answer/list');
+    const { data } = await client.get('/list');
     setListData(data);
     console.log(data);
   };
@@ -33,10 +33,6 @@ const LikeList = () => {
           <LikeBox key={list.id} list={list} />
         ))}
       </div>
-      <LikeBox />
-      <LikeBox />
-      <LikeBox />
-      <LikeBox />
       <Link to="/home">
         <StyledHomeBtn>홈으로</StyledHomeBtn>
       </Link>
