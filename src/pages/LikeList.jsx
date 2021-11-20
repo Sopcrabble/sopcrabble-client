@@ -33,7 +33,7 @@ const LikeList = () => {
           <LikeBox key={list.id} list={list} />
         ))}
       </div>
-      <Link to="/home">
+      <Link to="/">
         <StyledHomeBtn>홈으로</StyledHomeBtn>
       </Link>
     </StyledLikeList>
