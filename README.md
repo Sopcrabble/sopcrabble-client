@@ -6,6 +6,7 @@
 ## 2. 개발자 소개
 |김지윤|백지연|석상언|
 |-|-|-|
+|솝말잇기 생성|좋아요, 솝조어 후보 목록|인트로, 홈, 의뢰 등록|
 |[@Jiyun Kim](https://github.com/small-j)|[@Jiyeon Baek](https://github.com/100Gyeon)|[@Sangeon Seok](https://github.com/sharpcoder312)|
 
 ## 3. Convention
