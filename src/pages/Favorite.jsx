@@ -24,9 +24,12 @@ const Favorite = () => {
 export default Favorite;
 
 const StyledFavorite = styled.div`
+  margin: 0 auto;
   & > img {
     margin-top: 9.2rem;
     margin-bottom: 11.6rem;
+
+    width: 100%;
   }
 `;
 

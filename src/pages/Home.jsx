@@ -27,7 +27,7 @@ const Home = () => {
         <Link to="/registration">
           <StyledButton>의뢰 하기</StyledButton>
         </Link>
-        <Link to="/favortie">
+        <Link to="/favorite">
           <StyledButton>솝조어</StyledButton>
         </Link>
       </div>
