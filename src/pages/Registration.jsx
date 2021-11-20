@@ -71,6 +71,7 @@ const StyledRegistration = styled.div`
     position: relative;
     top: -25%;
     left: -35%;
+    background: transparent;
   }
 
   & > div:nth-child(2) {

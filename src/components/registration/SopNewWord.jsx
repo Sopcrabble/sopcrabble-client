@@ -5,8 +5,13 @@ import styled from 'styled-components';
 // import WordBox from './WordBox';
 import Question from './Question';
 // import { client } from 'libs/api';
+import { useNavigate } from 'react-router';
 
 const SopNewWord = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/likelist');
+  };
   const title = 'Q. 솝커톤 과제마감 1분 전인데 아직 작업중인 기분은?(3)';
   //   const location = useLocation();
   //   const id = location.id;
@@ -72,6 +77,7 @@ const SopNewWord = () => {
         <span>됐</span>
         <span>다</span>
       </StyledSopNewWord>
+      <StyledBtn onClick={handleClick}>입력</StyledBtn>
     </StyledNewWord>
   );
 };
@@ -123,6 +129,20 @@ const StyledSopNewWord = styled.div`
   & > span:last-child {
     margin-right: 0;
   }
+`;
+
+const StyledBtn = styled.button`
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 1rem 2.9rem;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 1.5rem;
+  margin-top: 19.9rem;
+  margin-bottom: 9.3rem;
+  width: 10rem;
+  position: relative;
+  right: -100%;
 `;
 
 export default SopNewWord;
