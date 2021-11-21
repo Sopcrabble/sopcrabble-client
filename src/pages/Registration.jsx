@@ -9,7 +9,7 @@ const Registration = () => {
     navigate(-1);
   };
   const handleRelay = () => {
-    navigate('/relay');
+    navigate('/');
   };
   const [values, setValues] = useState({ title: '', wordNum: '' });
 
