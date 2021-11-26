@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import countState from './Atoms';
-// import { useRecoilState } from 'recoil';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '../assets/images/logo.svg';
@@ -40,7 +38,7 @@ const Home = () => {
           <Main className="main" />
           <div className="buttons">
             <Link to="/registration">
-              <StyledButton>의뢰 하기</StyledButton>
+              <StyledButton>의뢰하기</StyledButton>
             </Link>
             <Link to="/favorite">
               <StyledButton>솝조어</StyledButton>
