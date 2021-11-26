@@ -1,26 +1,31 @@
 {
-  "list": [
-    {
-      "answerId": 3,
-      "word": "솝됐다",
-      "likeNum": 20
-    },
-    {
-      "answerId": 4,
-      "word": "어쩔솝",
-      "likeNum": 7
-    },
-    {
-      "answerId": 1,
-      "word": "숨ㅇ멎",
-      "likeNum": 2
-    },
-    {
-      "answerId": 2,
-      "word": "솝떡해",
-      "likeNum": 0
-    }
-  ],
+  "list": {
+    "questionId": 2,
+    "title": "Q. 솝커톤 과제마감 1분전인데 아직 작업중인 기분 표현해줘 ...",
+    "wordNum": 3,
+    "answers": [
+      {
+        "answerId": 3,
+        "word": "솝됐다",
+        "likeNum": 20
+      },
+      {
+        "answerId": 4,
+        "word": "어쩔솝",
+        "likeNum": 7
+      },
+      {
+        "answerId": 1,
+        "word": "숨ㅇ멎",
+        "likeNum": 2
+      },
+      {
+        "answerId": 2,
+        "word": "솝떡해",
+        "likeNum": 0
+      }
+    ]
+  },
   "answer": [
     {
       "answerId": 3,
