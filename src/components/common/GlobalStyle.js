@@ -87,9 +87,9 @@ const GlobalStyle = createGlobalStyle`
   .landing {animation: motion 1.2s linear 0s infinite alternate; margin-top: 0;}
         
   @keyframes motion {
-  	0% {margin-top: -5rem;}
-  	100% {margin-top: 10rem;}
-}
+    0% { margin-top: -5rem; }
+    100% { margin-top: 10rem; }
+  }
 `;
 
 export default GlobalStyle;
